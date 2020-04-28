@@ -28,3 +28,4 @@ stages:
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
+    - script: docker push c68495/docker_demosantosh2804:tags
