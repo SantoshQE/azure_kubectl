@@ -23,8 +23,8 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        containerRegistry: 'in28min-docker-hub'
-        repository: 'Currency_Exchange_DevOps'
+        containerRegistry: 'docker_demosantosh2804'
+        repository: 'docker_demosantosh2804'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
