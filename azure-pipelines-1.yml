@@ -21,6 +21,10 @@ stages:
       vmImage: 'ubuntu-latest'
     steps:
     - task: Docker@2
+      inputs:
+       containerRegistry: 'docker_demosantosh2804'
+       command: 'login'
+    - task: Docker@2
       displayName: Build an image
       inputs:
         containerRegistry: 'docker_demosantosh2804'
@@ -28,4 +32,4 @@ stages:
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
-    - script: docker push c68495/docker_demosantosh2804:tags
+
